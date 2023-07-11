@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+html {
+  background: #222;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.heart-container {
+  text-align: center;
+}
+
+svg {
+  display: block;
+  margin: auto;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  margin-bottom: 5rem;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.gradient-path {
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  --total-offset: 0;
+  animation: stroke-anim 6s linear infinite;
+}
+
+@keyframes stroke-anim {
+  to {
+    stroke-dashoffset: var(--total-offset);
+  }
+}
